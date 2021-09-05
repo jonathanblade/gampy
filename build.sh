@@ -18,3 +18,5 @@ poetry run pyinstaller --distpath ${DISTPATH} \
                        --onefile \
                        --clean \
                        main.py
+
+zip -j ./dist/gampy-v${VERSION}-linux64.zip ./dist/gampy README.md gampy.cfg
