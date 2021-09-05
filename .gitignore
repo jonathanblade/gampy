@@ -1,0 +1,10 @@
+__pycache__
+_build
+.venv
+clk
+dist
+nav
+obs
+out
+sp3
+gampy.log

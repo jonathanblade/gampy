@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "gampy"
+version = "1.0.0"
+description = "Tool for calculation of the precise point position (PPP) error using GAMP utility."
+authors = ["Semen Syrovatskiy <mail@syrovatskiy.tk>"]
+
+[tool.poetry.dependencies]
+python = "^3.9,<3.11"
+numpy = "^1.21.2"
+pandas = "^1.3.2"
+pyinstaller = "^4.5.1"
+
+[tool.poetry.dev-dependencies]
+black = "^21.8b0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
