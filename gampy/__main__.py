@@ -82,6 +82,7 @@ def main():
     process_dir = os.path.join(temp_dir, "gampy")
     gamp_out_dir = os.path.join(process_dir, "out")
 
+    rmdir(process_dir)
     mkdir(process_dir)
 
     prepare_files(nav_dir, process_dir, "nav")
@@ -97,7 +98,7 @@ def main():
             LOGGER.info(f"GAMP processes the file {file}")
             gamp.run()
         else:
-            LOGGER.info(f"Skip not observation file {file}")
+            LOGGER.info(f"GAMP skip the file {file}")
 
     gamp_out_files = os.listdir(gamp_out_dir)
     site_names = [fname[:4] for fname in gamp_out_files]
@@ -158,8 +159,6 @@ def main():
                     + "\n"
                 )
                 f.write(line)
-
-    rmdir(process_dir)
 
 
 if __name__ == "__main__":
