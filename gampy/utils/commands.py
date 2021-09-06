@@ -6,7 +6,11 @@ RNXCMP_DIR = "./3rdparty/RNXCMP"
 
 
 def uncompress(src):
-    cmd = f"gzip -fd {src}"
+    if os.name == "nt":
+        gzip = os.path.join(sys._MEIPASS, "gzip.exe")
+        cmd = f"{gzip} -fd {src}"
+    else:
+        cmd = f"gzip -fd {src}"
     os.system(cmd)
     return src[:-2]
 
@@ -36,6 +40,10 @@ def convert(src):
         rnxcmp_dir = sys._MEIPASS
     except AttributeError:
         rnxcmp_dir = RNXCMP_DIR
-    cmd = f"{rnxcmp_dir}/crx2rnx -d {src}"
+    if os.name == "nt":
+        crx2rnx = os.path.join(rnxcmp_dir, "crx2rnx.exe")
+    else:
+        crx2rnx = os.path.join(rnxcmp_dir, "crx2rnx")
+    cmd = f"{crx2rnx} -d {src}"
     os.system(cmd)
     return src[:-1] + "o"

@@ -58,7 +58,10 @@ class Gamp:
             self.gamp_dir = sys._MEIPASS
         except AttributeError:
             self.gamp_dir = GAMP_DIR
-        self.program_path = os.path.join(self.gamp_dir, "gamp")
+        if os.name == "nt":
+            self.program_path = os.path.join(self.gamp_dir, "gamp.exe")
+        else:
+            self.program_path = os.path.join(self.gamp_dir, "gamp")
         self.config = GampConfig(os.path.join(self.gamp_dir, "gamp.cfg"))
 
     def run(self):
