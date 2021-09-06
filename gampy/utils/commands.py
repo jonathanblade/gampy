@@ -36,6 +36,6 @@ def convert(src):
         rnxcmp_dir = sys._MEIPASS
     except AttributeError:
         rnxcmp_dir = RNXCMP_DIR
-    cmd = f"{rnxcmp_dir}/CRX2RNX -d {src}"
+    cmd = f"{rnxcmp_dir}/crx2rnx -d {src}"
     os.system(cmd)
     return src[:-1] + "o"

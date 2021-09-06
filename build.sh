@@ -13,7 +13,7 @@ poetry run pyinstaller --distpath ${DISTPATH} \
                        --specpath ${BUILDPATH} \
                        --add-binary ../3rdparty/GAMP/gamp:. \
                        --add-data ../3rdparty/GAMP/gamp.cfg:. \
-                       --add-binary ../3rdparty/RNXCMP/CRX2RNX:. \
+                       --add-binary ../3rdparty/RNXCMP/crx2rnx:. \
                        --name gampy \
                        --onefile \
                        --clean \
