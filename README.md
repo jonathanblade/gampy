@@ -4,7 +4,7 @@ Tool for calculation of the precise point position (PPP) error using GAMP utilit
 
 ## Configuration file
 
-```json
+```
 {
   "obsDir": "/path/to/obs/dir",
   "navDir": "/path/to/nav/dir",
