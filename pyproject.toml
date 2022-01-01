@@ -7,7 +7,7 @@ authors = ["Semen Syrovatskiy <mail@syrovatskiy.tk>"]
 [tool.poetry.dependencies]
 python = "^3.9,<3.11"
 numpy = "^1.21.4"
-pandas = "^1.3.4"
+pandas = "^1.3.5"
 pyinstaller = "^4.7"
 
 [tool.poetry.dev-dependencies]
