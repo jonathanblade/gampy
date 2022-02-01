@@ -11,7 +11,7 @@ pandas = "^1.4.0"
 pyinstaller = "^4.7"
 
 [tool.poetry.dev-dependencies]
-black = "^21.12b0"
+black = "^22.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
